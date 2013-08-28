@@ -1,12 +1,12 @@
-def old_roman(number)
+def old_roman(year)
   raise ArgumentError.new("Input be greater than 0.") if year < 1
   string = ''
-  string += 'M' * (number / 1000)
-  string += 'D' * (number % 1000 / 500)
-  string += 'C' * (number % 500 / 100)
-  string += 'L' * (number % 100 / 50)
-  string += 'X' * (number % 50 / 10)
-  string += 'V' * (number % 10 / 5)
-  string += 'I' * (number % 5 / 1)
+  string += 'M' * (year / 1000)
+  string += 'D' * (year % 1000 / 500)
+  string += 'C' * (year % 500 / 100)
+  string += 'L' * (year % 100 / 50)
+  string += 'X' * (year % 50 / 10)
+  string += 'V' * (year % 10 / 5)
+  string += 'I' * (year % 5 / 1)
   string
 end
