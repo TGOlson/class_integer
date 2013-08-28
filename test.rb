@@ -5,3 +5,5 @@ output = [1999.to_roman     == 'MCMXCIX',
           4.fact            == 24,
           1999.to_english   == 'nineteen ninety nine']
 p output
+
+#will return [true, true, true, false]
