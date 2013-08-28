@@ -1,6 +1,7 @@
 require './lib/methods/new_roman'
 require './lib/methods/old_roman'
 require './lib/methods/factorial'
+require './lib/methods/english_number'
 
 class Integer
   def to_roman
@@ -16,6 +17,6 @@ class Integer
   end
 
   def to_english
-    #needs to be created
+    english_number(self) #in progress
   end
 end
