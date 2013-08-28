@@ -15,10 +15,10 @@ Creates additional methods for the Integer class in Ruby.
    <ul><li>Returns any integer factorial.</li>
        <li>4.fact == 24</li></ul>
 
-    <li><b>test.rb</b></li>
-    <ul><li>Quick test that returns an array of true/false responses based on methods.</li></ul>
+   <li><b>test.rb</b></li>
+   <ul><li>Quick test that returns an array of true/false responses based on methods.</li></ul>
 
-    <li>Error checking for incorrect inputs.</li></ul>
+   <li>Error checking for incorrect inputs.</li></ul>
 
 <h3>To later include:</h3>
 
