@@ -1,4 +1,4 @@
-Additional methods for the Integer class in Ruby
+<b>Additional methods for the Integer class in Ruby</b>
 
 Currently includes:
 
