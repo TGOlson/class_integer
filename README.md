@@ -1,9 +1,11 @@
-<b>Additional methods for the Integer class in Ruby</b>
+<h1>class Integer</h1>
 
-Currently includes:
+Creates additional methods for the Integer class in Ruby.
 
-Integer.to_roman
-	This returns any integer (currently only up to 9999) in Roman numerals.
+<b>Currently includes:</b>
+<ul>
+<ul><li>Integer.to_roman</li>
+	<li>This returns any integer (currently only up to 9999) in Roman numerals.</li></ul>
 
 Integer.to_old_roman
 	This returns any integer (currently only up to 9999) in old style Roman numerals (VIII as opposed to IV in new Roman).
@@ -11,6 +13,7 @@ Integer.to_old_roman
 Integer.fact
 	This returns any integer factorial. 
 
+</ul>
 
 To later include:
 
