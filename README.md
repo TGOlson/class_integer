@@ -24,6 +24,6 @@ Creates additional methods for the Integer class in Ruby.
 
 <ul><li><b>Integer.to_english</b></li>
     <ul><li>This will return an integer as an english number.</li>
-        <li>1999.to_english == 'nineteen ninety nine'</ul>
+        <li>1999.to_english == 'one thousand nine hundred ninety nine'</ul>
 
 <li>Further expansion upon supported ranges.</li>
