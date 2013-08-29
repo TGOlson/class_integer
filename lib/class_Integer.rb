@@ -1,7 +1,7 @@
-require './lib/methods/new_roman'
-require './lib/methods/old_roman'
-require './lib/methods/factorial'
-require './lib/methods/english_number'
+require './methods/new_roman'
+require './methods/old_roman'
+require './methods/factorial'
+require './methods/english_number'
 
 class Integer
   def to_roman
@@ -17,6 +17,6 @@ class Integer
   end
 
   def to_english
-    english_number(self) #in progress
+    english_number(self)
   end
 end
