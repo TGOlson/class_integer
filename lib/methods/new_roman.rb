@@ -1,5 +1,7 @@
+require './old_roman'
+
 def new_roman(year)
-  raise ArgumentError.new("Input be greater than 0.") if year < 1
+  raise ArgumentError.new("Input must be greater than 0.") if year < 1
   digits = year.to_s.split('').reverse
   new_roman = []
   nines_fours = [['IX','IV'], # ones
@@ -11,7 +13,7 @@ def new_roman(year)
       new_roman << nines_fours[i][0]
     elsif x == "4"
       new_roman << nines_fours[i][1]
-    elsif x != 0
+    else
       new_roman << old_roman(x.to_i * (10 ** i))
     end
   end

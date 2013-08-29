@@ -1,5 +1,5 @@
 def old_roman(year)
-  raise ArgumentError.new("Input be greater than 0.") if year < 1
+  raise ArgumentError.new("Input must not be negative.") if year < 0
   string = ''
   string += 'M' * (year / 1000)
   string += 'D' * (year % 1000 / 500)
