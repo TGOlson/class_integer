@@ -26,7 +26,7 @@ while extra != 0
   lead = number / factor
   mag  = (number - (number % factor)) / lead
   extra = number - (lead * mag)
-  puts [number, lead, mag, extra].inspect
+ # puts [number, lead, mag, extra].inspect - test for loops
 
   if number > 100  
     string += ones_hash[lead] + ' ' + hundreds_hash[mag]
