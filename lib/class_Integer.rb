@@ -1,7 +1,7 @@
-require './methods/new_roman'
-require './methods/old_roman'
-require './methods/factorial'
-require './methods/english_number'
+require File.dirname(__FILE__) + '/methods/new_roman'
+require File.dirname(__FILE__) + '/methods/old_roman'
+require File.dirname(__FILE__) + '/methods/factorial'
+require File.dirname(__FILE__) + '/methods/english_number'
 
 class Integer
   def to_roman
