@@ -54,7 +54,8 @@ end
 end
 
 puts english_number(0)
-puts english_number(55)
+puts english_number(50)
 puts english_number(517)
 puts english_number(1003)
+puts english_number(1999)
 puts english_number(5720)
