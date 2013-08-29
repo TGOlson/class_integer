@@ -15,7 +15,7 @@ Creates additional methods for the Integer class in Ruby.
    <ul><li>Returns any integer factorial.</li>
        <li>4.fact == 24</li></ul>
        
-<ul><li><b>Integer.to_english</b></li>
+    <li><b>Integer.to_english</b></li>
     <ul><li>Returns an integer as an english number.</li>
         <li>1999.to_english == 'one thousand nine hundred ninety nine'</ul>
 
@@ -29,5 +29,3 @@ Creates additional methods for the Integer class in Ruby.
 <li>Additional ArgumentErrors for bad inputs.</li>
 
 <li>Expansion of #to_english range (currently up to 99,999).</li>
-
-<li>Further expansion upon supported ranges.</li>
