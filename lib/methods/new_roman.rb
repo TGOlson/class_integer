@@ -1,4 +1,5 @@
-require './old_roman'
+# require './old_roman'
+# necessary to run independently
 
 def new_roman(year)
   raise ArgumentError.new("Input must be greater than 0.") if year < 1
