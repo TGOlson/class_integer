@@ -26,6 +26,6 @@ Creates additional methods for the Integer class in Ruby.
 
 <h3>To later include:</h3>
 
-<li>Additional ArgumentErrors for bad inputs.</li>
+<ul><li>Additional ArgumentErrors for bad inputs.</li>
 
-<li>Expansion of #to_english range (currently up to 99,999).</li>
+<li>Expansion of #to_english range (currently up to 99,999).</li></ul>
