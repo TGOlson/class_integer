@@ -4,11 +4,11 @@ Creates additional methods for the Integer class in Ruby.
 
 <h3>Currently includes:</h3>
 <ul><li><b>Integer.to_roman</b></li>
-    <ul><li>Returns any integer (currently only up to 9999) in Roman numerals.</li>
+    <ul><li>Returns any integer (up to 3999) in Roman numerals.</li>
         <li>1999.to_roman == 'MCMXCIX'</li></ul>
 
    <li><b>Integer.to_old_roman</b></li>
-   <ul><li>Returns any integer (currently only up to 9999) in old style Roman numerals (VIII as opposed to IV in new Roman).</li>
+   <ul><li>Returns any integer (up to 3999) in old style Roman numerals (VIIII as opposed to IV in new Roman).</li>
         <li>1999.to_old_roman == 'MDCCCCLXXXXVIIII'</li></ul>
 
    <li><b>Integer.fact</b></li>
