@@ -14,16 +14,18 @@ Creates additional methods for the Integer class in Ruby.
    <li><b>Integer.fact</b></li>
    <ul><li>Returns any integer factorial.</li>
        <li>4.fact == 24</li></ul>
+       
+<li><b>Integer.to_english</b></li>
+<ul><li>Returns an integer as an english number.</li>
+    <li>1999.to_english == 'one thousand nine hundred ninety nine'</ul>
 
-   <li><b>test.rb</b></li>
-   <ul><li>Quick test that returns an array of true/false responses based on methods.</li></ul>
+<li><b>test.rb</b></li>
+<ul><li>Quick test that returns an array of true/false responses based on methods.</li></ul>
 
-   <li>Error checking for incorrect inputs.</li></ul>
+<li>Error checking for incorrect inputs.</li></ul>
 
 <h3>To later include:</h3>
 
-<ul><li><b>Integer.to_english</b></li>
-    <ul><li>This will return an integer as an english number.</li>
-        <li>1999.to_english == 'one thousand nine hundred ninety nine'</ul>
+<ul><li>Additional ArgumentErrors for bad inputs.</li>
 
-<li>Further expansion upon supported ranges.</li>
+<li>Expansion of #to_english range (currently up to 99,999).</li></ul>
