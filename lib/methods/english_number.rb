@@ -64,8 +64,3 @@ def factors(number) # number greater than or equal to 100
                    9 => 'billion', 12 => 'trillion'}
   hundred_hash[number]
 end
-
-puts english_number(10124)
-puts english_number(10123424)
-puts english_number(1014)
-puts english_number(67101246)
