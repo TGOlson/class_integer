@@ -17,7 +17,8 @@ Creates additional methods for the Integer class in Ruby.
        
 <li><b>Integer.to_english</b></li>
 <ul><li>Returns an integer as an english number.</li>
-    <li>1999.to_english == 'one thousand nine hundred ninety nine'</ul>
+	<li>Works up to trillions.</li>
+    <li>1999.to_english == 'one thousand nine hundred and ninety nine'</ul>
 
 <li><b>test.rb</b></li>
 <ul><li>Quick test that returns an array of true/false responses based on methods.</li></ul>
@@ -27,5 +28,3 @@ Creates additional methods for the Integer class in Ruby.
 <h3>To later include:</h3>
 
 <ul><li>Additional ArgumentErrors for bad inputs.</li>
-
-<li>Expansion of #to_english range (currently up to 99,999).</li></ul>

@@ -2,7 +2,6 @@ def english_number(number)
   raise ArgumentError.new("Input be greater than or equal to 0.") if number < 0
   return 'zero' if number == 0
   string = ''
-  puts number
 
   factor = number.to_s.length - 1
 
