@@ -6,21 +6,13 @@ def english_number(number)
   factor = number.to_s.length - 1
 
   if factor >= 2
-    if factor >= 12 # add trillions
-      lead_digits = (number % 10 ** 15) / 10 ** 12
-      string += parser(lead_digits) + ' ' + factors(12) + ' '
-    end
-    if factor >= 9 # add billions
-      lead_digits = (number % 10 ** 12) / 10 ** 9
-      string += parser(lead_digits) + ' ' + factors(9) + ' '
-    end
-    if factor >= 6 # add millions
-      lead_digits = (number % 10 ** 9) / 10 ** 6
-      string += parser(lead_digits) + ' ' + factors(6) + ' '
-    end
-    if factor >= 3 # add thousands
-      lead_digits = (number % 10 ** 6) / 10 ** 3
-      string += parser(lead_digits) + ' ' + factors(3) + ' '
+    factor_check = 12 # start at trillions
+    while factor_check > 0
+      if factor >= factor_check
+        lead_digits = (number % 10 ** (factor_check + 3)) / 10 ** factor_check
+        string += parser(lead_digits) + ' ' + factors(factor_check) + ' '
+      end
+      factor_check -= 3
     end
 
     string += 'and ' if number % 1000 < 100
@@ -46,12 +38,13 @@ def small_number(number) #number under 99
                    70 => 'seventy',   80 => 'eighty',   90 => 'ninety'}
 
   extra = number % 10
-  string += small_hash[number - extra] + ' ' if number != extra
-  string += small_hash[extra] if extra != 0
+  return small_hash[number] if number < 20
+  string += small_hash[number - extra] + ' ' if number >= 20
+  string += small_hash[extra] if extra != 0 && number >= 20
   string
 end
 
-def parser(number)
+def parser(number) # decides is lead_digits needs to be processed as hundreds, or a small number
   string = ''
   string += hundreds(number) if number >= 100
   string += small_number(number) if number < 100
@@ -71,3 +64,8 @@ def factors(number) # number greater than or equal to 100
                    9 => 'billion', 12 => 'trillion'}
   hundred_hash[number]
 end
+
+puts english_number(10124)
+puts english_number(10123424)
+puts english_number(1014)
+puts english_number(67101246)
