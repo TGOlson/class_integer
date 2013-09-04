@@ -6,6 +6,10 @@ def english_number(number)
   factor = number.to_s.length - 1
 
   if factor >= 2
+    if factor >= 12 # add trillions
+      lead_digits = (number % 10 ** 15) / 10 ** 12
+      string += parser(lead_digits) + ' ' + factors(12) + ' '
+    end
     if factor >= 9 # add billions
       lead_digits = (number % 10 ** 12) / 10 ** 9
       string += parser(lead_digits) + ' ' + factors(9) + ' '
