@@ -17,6 +17,7 @@ def english_number(number)
 
     string += 'and ' if ((number % 1000 < 100) && (number % 1000 != 0))
     string += parser(number % 1000) # last three digits
+    string.chop! if number % 1000 == 0 # remove extra space if no ones or tens
   else
     string += small_number(number)
   end
@@ -62,7 +63,7 @@ def hundreds(number)
   string
 end
 
-def factors(number) # number greater than or equal to 100
+def factors(number) # 10 ** factor
   hundred_hash = { 2 => 'hundred', 3 => 'thousand', 6 => 'million',
                    9 => 'billion', 12 => 'trillion'}
   hundred_hash[number]
