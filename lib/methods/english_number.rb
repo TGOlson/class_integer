@@ -6,16 +6,16 @@ def english_number(number)
   factor = number.to_s.length - 1
 
   if factor >= 2
-    factor_check = 12 # start at trillions
-    while factor_check > 0
-      if factor >= factor_check
-        lead_digits = (number % 10 ** (factor_check + 3)) / 10 ** factor_check
-        string += parser(lead_digits) + ' ' + factors(factor_check) + ' '
+
+    factor_check = [12,9,6,3] # trillions, billions, millions, thousands
+    factor_check.each do |x|
+      if factor >= x
+        lead_digits = (number % 10 ** (x + 3)) / 10 ** x # remove numbers from higher and lower factors
+        string += parser(lead_digits) + ' ' + factors(x) + ' ' if lead_digits != 0
       end
-      factor_check -= 3
     end
 
-    string += 'and ' if number % 1000 < 100
+    string += 'and ' if ((number % 1000 < 100) && (number % 1000 != 0))
     string += parser(number % 1000) # last three digits
   else
     string += small_number(number)
@@ -25,7 +25,7 @@ def english_number(number)
 end
 
 
-def small_number(number) #number under 99
+def small_number(number) # numbers under 99
   string = ''
   small_hash   = {  1 => 'one',        2 => 'two',       3 => 'three', 
                     4 => 'four',       5 => 'five',      6 => 'six', 
@@ -37,17 +37,20 @@ def small_number(number) #number under 99
                    40 => 'fourty',    50 => 'fifty',    60 => 'sixty', 
                    70 => 'seventy',   80 => 'eighty',   90 => 'ninety'}
 
-  extra = number % 10
-  return small_hash[number] if number < 20
-  string += small_hash[number - extra] + ' ' if number >= 20
-  string += small_hash[extra] if extra != 0 && number >= 20
+  if number < 20
+    return small_hash[number]
+  else
+    extra = number % 10
+    string += small_hash[number - extra]
+    string += ' ' + small_hash[extra] if extra != 0
+  end
   string
 end
 
 def parser(number) # decides is lead_digits needs to be processed as hundreds, or a small number
   string = ''
   string += hundreds(number) if number >= 100
-  string += small_number(number) if number < 100
+  string += small_number(number) if number < 100 && number != 0
   string
 end 
 
@@ -64,3 +67,6 @@ def factors(number) # number greater than or equal to 100
                    9 => 'billion', 12 => 'trillion'}
   hundred_hash[number]
 end
+
+
+puts english_number(gets.chomp.to_i)
