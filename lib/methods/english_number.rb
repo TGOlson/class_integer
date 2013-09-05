@@ -68,6 +68,3 @@ def factors(number) # 10 ** factor
                    9 => 'billion', 12 => 'trillion'}
   hundred_hash[number]
 end
-
-
-puts english_number(gets.chomp.to_i)
