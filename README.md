@@ -11,7 +11,7 @@ Creates additional methods for the Integer class in Ruby.
    <ul><li>Returns any integer (up to 3999) in old style Roman numerals (VIIII as opposed to IV in new Roman).</li>
         <li>1999.to_old_roman == 'MDCCCCLXXXXVIIII'</li></ul>
 
-   <li><b>Integer.fact</b></li>
+   <li><b>Integer.!</b></li>
    <ul><li>Returns any integer factorial.</li>
        <li>4.! == 24</li></ul>
        
