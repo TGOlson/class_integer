@@ -13,7 +13,7 @@ class Integer
     old_roman(self)
   end
 
-  def !
+  def fact
   	factorial(self)
   end
 
