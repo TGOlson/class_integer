@@ -1,23 +1,22 @@
-# require './old_roman'
-# necessary to run independently
+NEW_ROMAN_ARRAY = [[1000,  'M'], 
+                   [ 900, 'CM'], 
+                   [ 500,  'D'], 
+                   [ 400, 'CD'], 
+                   [ 100,  'C'],  
+                   [  90, 'XC'],
+                   [  50,  'L'],  
+                   [  40, 'XL'], 
+                   [  10,  'X'],   
+                   [   9, 'IX'], 
+                   [   5,  'V'],   
+                   [   4, 'IV'], 
+                   [   1,  'I']]
 
-def new_roman(year)
-  raise ArgumentError.new("Input must be greater than 0.") if year < 1
-  digits = year.to_s.split('').reverse
-  new_roman = []
-  nines_fours = [['IX','IV'], # ones
-   			         ['XC','XL'], # tens
-				         ['CM','CD']] # hundreds
-
-  digits.each_with_index do |x,i|
-    if x == "9"
-      new_roman << nines_fours[i][0]
-    elsif x == "4"
-      new_roman << nines_fours[i][1]
-    else
-      new_roman << old_roman(x.to_i * (10 ** i))
-    end
+def new_roman(number)
+  string = ''
+  NEW_ROMAN_ARRAY.each do |pair|
+    string += pair[1] * (number / pair[0])
+    number %= pair[0]
   end
-
-  new_roman.reverse.join
+  string
 end
